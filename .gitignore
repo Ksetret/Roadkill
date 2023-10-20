@@ -61,3 +61,5 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+/Assets/KirillC#/Scenes/SceneKirill.unity.meta
+/Assets/KirillC#/SceneKirill.unity.meta
