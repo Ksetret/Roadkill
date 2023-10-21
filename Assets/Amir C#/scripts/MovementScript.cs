@@ -1,63 +1,55 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PhysicsMovement : MonoBehaviour
 {
+    //
     //[SerializeField] private GameObject _blood;
-    [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private SurfaceSlider _surfaceSlider;
     [SerializeField] private float _speed;
+
+    private Rigidbody _rigidbody;
+    private Vector3 _normal;
 
     public void Move(Vector3 direction)
     {
-        Vector3 directionAlongSurface = _surfaceSlider.Project(direction.normalized);
+        Vector3 directionAlongSurface = Project(direction);
         Vector3 offset = directionAlongSurface * (_speed * Time.deltaTime);
 
         _rigidbody.MovePosition(_rigidbody.position + offset);
     }
 
-    private void Awake()
+    public Vector3 Project(Vector3 direction)
     {
-        //
+        return direction - (_normal * Vector3.Dot(direction, _normal));
     }
 
-    // Start is called before the first frame update
+
+
     void Start()
     {
-        _surfaceSlider = GetComponent<SurfaceSlider>();
-        //
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDrawGizmos()
     {
-        /*if (Input.GetKey(KeyCode.A))
-            _speed = -0.1f;
-        else if (Input.GetKey(KeyCode.D))
-            _speed = 0.1f;
-        else
-            _speed = 0;*/
-
-        //
-    }
-
-    private void FixedUpdate()
-    {
-        //gameObject.transform.position = new Vector3(gameObject.transform.position.x + _speed,
-                                                    //gameObject.transform.position.y,
-                                                    //gameObject.transform.position.z);
-
-        //print(_speed);
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.localPosition, transform.localPosition + (_normal * 2));
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.localPosition, transform.localPosition + Project(transform.forward));
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.Space))
         {
             other.gameObject.SetActive(false);
         }
 
         //print(other.name);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        _rigidbody = gameObject.GetComponent<Rigidbody>();
+        _normal = collision.GetContact(0).normal;
     }
 }

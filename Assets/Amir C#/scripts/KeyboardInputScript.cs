@@ -1,14 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class KeyboardInputScript : MonoBehaviour
 {
     private PhysicsMovement _movement;
 
-    private float horizontal;
-    private float vertical;
+    private float _horizontal;
+    private float _vertical;
+
+    private void FixedUpdate()
+    {
+        _horizontal = Input.GetAxis(Axis.HORIZONTAL_AXIS);
+        _vertical = Input.GetAxis(Axis.VERTICAL_AXIS);
+
+        _movement.Move(new Vector3(_horizontal, 0, _vertical));
+    }
 
     private void Start()
     {
@@ -18,14 +23,6 @@ public class KeyboardInputScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void FixedUpdate()
-    {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-
-        _movement.Move(new Vector3(horizontal, 0, vertical));
+        //
     }
 }
