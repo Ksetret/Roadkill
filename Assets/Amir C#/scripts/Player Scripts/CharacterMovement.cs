@@ -11,9 +11,9 @@ public class CharacterMovement : MonoBehaviour
     float _yRotation = 90f;
     //float _rotationSpeed;
 
-    public void DetectMovement(float movement)
+    public void DetectMovement(float movement_x, float movement_z = 0)
     {
-        _rigidbody.velocity = new Vector3(movement * _speed, _rigidbody.velocity.y, 0); // Input.GetAxisRaw(Axis.VERTICAL_AXIS) * _zSpeed;
+        _rigidbody.velocity = new Vector3(movement_x * _speed, _rigidbody.velocity.y, movement_z * _speed); // Input.GetAxisRaw(Axis.VERTICAL_AXIS) * _zSpeed;
     }
 
     public void RotatePlayer(float movement)
