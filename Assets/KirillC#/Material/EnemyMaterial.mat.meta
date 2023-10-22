@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/KirillC#/Material/EnemyMaterial.mat.meta
 guid: 11972efbe18e61542aadefcba858a482
+========
+guid: 0a801979b84e4af46bebb5e3a060ac93
+>>>>>>>> add9e3cbcd193a460b9af0abd72778246821c650:Assets/Amir C#/Materials/mat1.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
