@@ -4,10 +4,12 @@ public class HealthSystem : MonoBehaviour
 {
     public uint _maxHealth;
     public uint _currentHealth;
+    public bool _inBlockingState;
 
-    public void SetDamage()
+    public void SetDamage(uint damage)
     {
-        _currentHealth--;
+        if(!_inBlockingState)
+            _currentHealth -= damage;
 
         if (_currentHealth <= 0)
             gameObject.SetActive(false);

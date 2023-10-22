@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-    public bool _inBlockingState;
-
+    HealthSystem _healthSystem;
     CharacterMovement _characterMovement;
 
     float _xMovement, _zMovement;
@@ -18,7 +17,7 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl))
             transform.localScale = new Vector3(1f, 0.5f, 1f);
         else if (Input.GetKey(KeyCode.B))
-            _inBlockingState = Input.GetKey(KeyCode.B);
+            _healthSystem._inBlockingState = Input.GetKey(KeyCode.B);
         else
         {
             transform.localScale = new Vector3(1, 1, 1);

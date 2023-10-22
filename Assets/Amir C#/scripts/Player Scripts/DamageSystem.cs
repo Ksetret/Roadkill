@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class DamageSystem : MonoBehaviour
 {
+    [SerializeField] HealthSystem _healthSystem;
+
+    private void Awake()
+    {
+        _healthSystem = GetComponentInChildren<HealthSystem>();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out HealthSystem healthSystem))
-        {
-            if (other.TryGetComponent(out PlayerControls _controls))
+            if(_healthSystem != healthSystem)
             {
-                if(!_controls._inBlockingState)
-                    healthSystem.SetDamage();
+                print(healthSystem.name);
+                healthSystem.SetDamage(1);
             }
-        }
     }
 }
