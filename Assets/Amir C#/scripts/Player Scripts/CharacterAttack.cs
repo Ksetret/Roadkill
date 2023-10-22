@@ -33,15 +33,11 @@ public class CharacterAttack : MonoBehaviour
                 _characterAnimation.Punch_1();
             if (_currentComboState == ComboState.PUNCH_2)
                 _characterAnimation.Punch_2();
-            //if (_currentComboState == ComboState.PUNCH_3)
-                //_characterAnimation.Punch_3();
         }
         else if (Input.GetKeyDown(KeyCode.Q))
         {
             if (_currentComboState == ComboState.KICK_1)
                 _characterAnimation.Kick_1();
-            //if (_currentComboState == ComboState.KICK_2)
-                //_characterAnimation.Kick_2();
         }
     }
 
