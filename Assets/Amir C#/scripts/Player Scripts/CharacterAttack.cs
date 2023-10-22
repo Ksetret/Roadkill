@@ -5,9 +5,7 @@ public enum ComboState
     NONE,
     PUNCH_1,
     PUNCH_2,
-    KICK_1,
-    KICK_2,
-    PUNCH_3
+    KICK_1
 }
 
 public class CharacterAttack : MonoBehaviour
@@ -24,8 +22,8 @@ public class CharacterAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (_currentComboState == ComboState.KICK_2)
-                return;
+            //if (_currentComboState == ComboState.KICK_2)
+                //return;
 
             _currentComboState++;
             _activateTimerToReset = true;
@@ -35,15 +33,15 @@ public class CharacterAttack : MonoBehaviour
                 _characterAnimation.Punch_1();
             if (_currentComboState == ComboState.PUNCH_2)
                 _characterAnimation.Punch_2();
-            if (_currentComboState == ComboState.PUNCH_3)
-                _characterAnimation.Punch_3();
+            //if (_currentComboState == ComboState.PUNCH_3)
+                //_characterAnimation.Punch_3();
         }
         else if (Input.GetKeyDown(KeyCode.Q))
         {
             if (_currentComboState == ComboState.KICK_1)
                 _characterAnimation.Kick_1();
-            if (_currentComboState == ComboState.KICK_2)
-                _characterAnimation.Kick_2();
+            //if (_currentComboState == ComboState.KICK_2)
+                //_characterAnimation.Kick_2();
         }
     }
 
