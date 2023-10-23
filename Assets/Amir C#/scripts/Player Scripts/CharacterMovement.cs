@@ -6,7 +6,6 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] float _zSpeed = 1.5f;
     [SerializeField] Transform _mesh;
 
-    CharacterAnimation _characterAnimation;
     Rigidbody _rigidbody;
 
     float _yRotation = 90f;
@@ -31,16 +30,10 @@ public class CharacterMovement : MonoBehaviour
         _mesh.rotation = Quaternion.Euler(0f, _yRotation, 0f);
     }
 
-    public void AnimatePlayerWalk(bool movement)
-    {
-        _characterAnimation.Move(movement);
-    }
-
 
 
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _characterAnimation = GetComponentInChildren<CharacterAnimation>();
     }
 }

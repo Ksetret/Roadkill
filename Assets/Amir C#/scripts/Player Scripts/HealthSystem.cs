@@ -15,13 +15,13 @@ public class HealthSystem : MonoBehaviour
         if (!_inBlockingState)
         {
             _currentHealth -= damage;
-            //_characterAnimation.SetAnimationTriggerByName(AnimationTags.HIT_TRIGGER);
+            _characterAnimation.Hit();
         }
 
         if (_currentHealth <= 0)
         {
             _isDead = true;
-            _characterAnimation.SetAnimationTriggerByName(AnimationTags.DEATH_TRIGGER);
+            _characterAnimation.Death();
         }
     }
 
