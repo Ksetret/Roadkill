@@ -18,25 +18,28 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftControl))
+        if(!_healthSystem._isDead)
         {
-            _colliderOnCrouch.enabled = true;
-            _colliderFullHeight.enabled = false;
-        }
-        else if (Input.GetKey(KeyCode.B))
-            _healthSystem._inBlockingState = Input.GetKey(KeyCode.B);
-        else
-        {
-            _colliderFullHeight.enabled = true;
-            _colliderOnCrouch.enabled = false;
-
-            if (_xMovement != 0 || _zMovement != 0)
-                _characterMovement.AnimatePlayerWalk(true);
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                _colliderOnCrouch.enabled = true;
+                _colliderFullHeight.enabled = false;
+            }
+            else if (Input.GetKey(KeyCode.B))
+                _healthSystem._inBlockingState = Input.GetKey(KeyCode.B);
             else
-                _characterMovement.AnimatePlayerWalk(false);
-        }
+            {
+                _colliderFullHeight.enabled = true;
+                _colliderOnCrouch.enabled = false;
 
-        _characterMovement.RotatePlayer(_xMovement);
+                if (_xMovement != 0 || _zMovement != 0)
+                    _characterMovement.AnimatePlayerWalk(true);
+                else
+                    _characterMovement.AnimatePlayerWalk(false);
+            }
+
+            _characterMovement.RotatePlayer(_xMovement);
+        }
     }
 
     private void FixedUpdate()
@@ -44,7 +47,7 @@ public class PlayerControls : MonoBehaviour
         _xMovement = Input.GetAxisRaw(Axis.HORIZONTAL_AXIS);
         _zMovement = Input.GetAxisRaw(Axis.VERTICAL_AXIS);
 
-        if (!Input.GetKey(KeyCode.LeftControl) && !Input.GetKey(KeyCode.B))
+        if (!Input.GetKey(KeyCode.LeftControl) && !Input.GetKey(KeyCode.B) && !_healthSystem._isDead)
             _characterMovement.DetectMovement(_xMovement, _zMovement); // new Vector3(_horizontal, 0, _vertical));
     }
 }

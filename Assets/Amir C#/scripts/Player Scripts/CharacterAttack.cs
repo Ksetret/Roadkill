@@ -24,7 +24,7 @@ public class CharacterAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             //if (_currentComboState == ComboState.KICK_2)
-                //return;
+            //return;
 
             _currentComboState++;
             _activateTimerToReset = true;
@@ -72,7 +72,10 @@ public class CharacterAttack : MonoBehaviour
 
     void Update()
     {
-        ComboAttacks();
-        ResetComboState();
+        if (gameObject.TryGetComponent(out HealthSystem health_system) && !health_system._isDead)
+        {
+            ComboAttacks();
+            ResetComboState();
+        }
     }
 }
