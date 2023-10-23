@@ -33,7 +33,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void AnimatePlayerWalk(bool movement)
     {
-        _characterAnimation.Walk(movement);
+        _characterAnimation.Move(movement);
     }
 
 

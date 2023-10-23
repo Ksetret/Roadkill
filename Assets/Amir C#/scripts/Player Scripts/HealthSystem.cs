@@ -12,7 +12,7 @@ public class HealthSystem : MonoBehaviour
             _currentHealth -= damage;
 
         if (_currentHealth <= 0)
-            gameObject.SetActive(false);
+            gameObject.SetActive(false); // прописать смерть и запуск соответствующей анимации
     }
 
     public void GetHealth(uint heal_amount)
