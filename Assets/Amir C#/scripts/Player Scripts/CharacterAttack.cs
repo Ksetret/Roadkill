@@ -5,7 +5,8 @@ public enum ComboState
     NONE,
     PUNCH_1,
     PUNCH_2,
-    KICK_1
+    KICK_1,
+    SPECIAL1
 }
 
 public class CharacterAttack : MonoBehaviour
@@ -23,21 +24,21 @@ public class CharacterAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             //if (_currentComboState == ComboState.KICK_2)
-                //return;
+            //return;
 
             _currentComboState++;
             _activateTimerToReset = true;
             _currentComboTimer = _defaultComboTimer;
 
             if (_currentComboState == ComboState.PUNCH_1)
-                _characterAnimation.Punch_1();
+                _characterAnimation.SetAnimationTriggerByName(AnimationTags.PUNCH_1_TRIGGER);
             if (_currentComboState == ComboState.PUNCH_2)
-                _characterAnimation.Punch_2();
+                _characterAnimation.SetAnimationTriggerByName(AnimationTags.PUNCH_2_TRIGGER);
         }
         else if (Input.GetKeyDown(KeyCode.Q))
         {
             if (_currentComboState == ComboState.KICK_1)
-                _characterAnimation.Kick_1();
+                _characterAnimation.SetAnimationTriggerByName(AnimationTags.KICK_1_TRIGGER);
         }
     }
 
@@ -71,7 +72,10 @@ public class CharacterAttack : MonoBehaviour
 
     void Update()
     {
-        ComboAttacks();
-        ResetComboState();
+        if (gameObject.TryGetComponent(out HealthSystem health_system) && !health_system._isDead)
+        {
+            ComboAttacks();
+            ResetComboState();
+        }
     }
 }
