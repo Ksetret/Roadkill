@@ -27,7 +27,7 @@ public class HealthScript : MonoBehaviour
 
         if(_health <= 0f)
         {
-            _animationScript.Death();
+            //_animationScript.Death();
             _characterDied = true;
 
             if (_isPlayer)
@@ -43,13 +43,13 @@ public class HealthScript : MonoBehaviour
             {
                 if(Random.Range(0, 2) > 0)
                 {
-                    _animationScript.KnockDown();
+                    //_animationScript.KnockDown();
                 }
                 else
                 {
                     if(Random.Range(0, 3) > 1)
                     {
-                        _animationScript.Hit();
+                        //_animationScript.Hit();
                     }
                 }
 

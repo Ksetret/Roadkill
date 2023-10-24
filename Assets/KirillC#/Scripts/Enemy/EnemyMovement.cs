@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
         _enemyAnim = GetComponentInChildren<CharacterAnimation>();
         _myBody = GetComponent<Rigidbody>();
 
-        _playerTarget = GameObject.FindWithTag(Tags.PLAYER_TAG).transform;
+        //_playerTarget = GameObject.FindWithTag(Tags.PLAYER_TAG).transform;
     }
 
     private void Start()
@@ -54,12 +54,12 @@ public class EnemyMovement : MonoBehaviour
 
             if(_myBody.velocity.sqrMagnitude != 0)
             {
-                _enemyAnim.Walk(true);
+                //_enemyAnim.Walk(true);
             }
         } else if(Vector3.Distance(transform.position, _playerTarget.position) <= _attackDistance)
         {
             _myBody.velocity = Vector3.zero;
-            _enemyAnim.Walk(false);
+            //_enemyAnim.Walk(false);
 
             _followPlayer = false;
             _attackPlayer = true;
