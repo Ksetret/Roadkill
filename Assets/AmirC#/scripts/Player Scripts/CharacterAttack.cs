@@ -13,7 +13,7 @@ public class CharacterAttack : MonoBehaviour
 
     ComboState _currentComboState;
 
-    float _defaultComboTimer = 0.5f;
+    float _defaultComboTimer = 0.2f;
     float _currentComboTimer;
     bool _activateTimerToReset;
 

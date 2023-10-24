@@ -19,12 +19,44 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Armature|\u0412\u044B\u0441\u0442\u0440\u0435\u043B_\u0438\u0437_\u043F\u0443\u0448\u043A\u0438'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone'
+      has translation animation that will be discarded.\n\t'Bone' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\nClip 'Armature|\u041C\u0431_\u0445\u043E\u0434\u044C\u0431\u0430'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|\u041C\u043E\u0442\u043E\u0440' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Bone' has translation animation that will
+      be discarded.\n\t'Bone' is inbetween humanoid transforms and has rotation animation
+      that will be discarded.\n\nClip 'Armature|\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435_\u0443\u0440\u043E\u043D\u0430'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone'
+      has translation animation that will be discarded.\n\t'Bone' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\nClip 'Armature|\u0421\u043C\u0435\u0440\u0442\u044C'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone'
+      has translation animation that will be discarded.\n\t'Bone' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\nClip 'Armature|\u0423\u0434\u0430\u0440_\u041C\u043E\u043B\u043E\u0442\u043E\u043C'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|\u0423\u0434\u0430\u0440_\u043D\u043E\u0433\u043E\u0439' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Bone' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\nClip 'Armature|\u0423\u0434\u0430\u0440_\u043F\u0438\u043B\u043E\u0439'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone'
+      has translation animation that will be discarded.\n\t'Bone' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'1' has translation
+      animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -314,7 +346,582 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: SM_PostApocalypRobor(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object.004_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.7119106, y: 0.97594327, z: 0.47306865}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: shipi_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.76336324, y: 1.8531239, z: -0.32557714}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.013_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.36185306, y: 0.16346796, z: 0.08840143}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.014_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.36185306, y: 0.080520615, z: -0.12670808}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: for_details_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.36185306, y: 0.12739447, z: -0.037332933}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.023_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0, y: 1.1527337, z: -0.28412557}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.024_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0, y: 1.1527337, z: -0.28412557}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.025_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0, y: 2.0749831, z: -0.26130208}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.026_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.20405217, y: 2.1711035, z: -0.2571495}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.027_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0, y: 1.5152931, z: -0.22786191}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.028_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0, y: 1.4966416, z: -0.22786191}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.029_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0, y: 2.0327551, z: -0.22908457}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.030_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.5789292, y: 1.8584772, z: -0.33332705}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.031_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.6694901, y: 1.2146636, z: -0.021803007}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.032_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.7237103, y: 0.9589481, z: 0.56651217}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: rezak_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.7669158, y: 0.9759726, z: 0.72172266}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: details_of_rezak_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.77806693, y: 0.89642876, z: 0.5596177}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.059_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0, y: 1.3938104, z: -0.22786196}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.060_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.7237103, y: 0.9589481, z: 0.56651217}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.061_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.19793989, y: 2.229757, z: -0.25804693}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.062_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.1384653, y: 2.0486112, z: -0.14746062}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.063_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.1384653, y: 2.0486112, z: -0.37430084}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.064_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.24750197, y: 2.0486112, z: -0.14746062}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.065_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.24750197, y: 2.0486112, z: -0.37430084}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.066_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.7237103, y: 0.9589481, z: 0.56651217}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.067_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.36185306, y: 0.33714825, z: -0.19280909}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.068_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.36185306, y: 0.42704332, z: -0.22424935}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.070_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.3597678, y: 1.1403311, z: -0.24377748}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.071_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.36185306, y: 0.773099, z: -0.08967522}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.072_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.36185306, y: 0.85359174, z: -0.17016794}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.073_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.19281322, y: 1.14419, z: -0.24726889}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.074_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.2066238, y: 1.14419, z: -0.24726889}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.075_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.21447925, y: 1.14419, z: -0.24726889}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.076_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.20394349, y: 2.1733937, z: 0.18139347}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.077_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.0060078027, y: 1.2965083, z: -0.2338404}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.078_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.0060078027, y: 1.2977412, z: -0.2127691}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.079_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.3673923, y: 1.8762002, z: -0.3136413}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.080_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.46036318, y: 1.8946455, z: -0.33909425}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.081_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.43371385, y: 1.8901614, z: -0.33909425}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.082_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.64150727, y: 1.3817983, z: -0.26754016}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.083_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.5710617, y: 1.303484, z: -0.23821574}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.084_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.72391003, y: 1.303484, z: -0.25189418}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.085_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.64753735, y: 1.303484, z: -0.24734993}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.086_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.6648001, y: 1.2460382, z: -0.12176379}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.087_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.69651634, y: 1.2987434, z: -0.077591255}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.088_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.73661786, y: 1.2547449, z: -0.10174831}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.089_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.63167375, y: 1.2956171, z: -0.07091504}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.090_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.59452, y: 1.2484206, z: -0.08688816}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.091_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.6125151, y: 1.1950843, z: -0.11237593}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.092_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.72230333, y: 1.1996819, z: -0.12398311}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.093_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.66682786, y: 1.1740038, z: -0.12890944}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.094_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.7538221, y: 1.1397355, z: 0.11473858}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.095_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.63666517, y: 1.1397355, z: 0.12926412}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.096_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.69669324, y: 1.1710773, z: 0.13547198}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.097_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.69307977, y: 1.109109, z: 0.106327444}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.098_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.5995776, y: 1.1313992, z: 0.15303862}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.100_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.8016005, y: 1.131399, z: 0.12799099}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.102_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.61510557, y: 1.1183345, z: 0.17235807}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.103_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.79305315, y: 1.1183343, z: 0.15029526}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.104_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.6912647, y: 1.1529652, z: 0.09168736}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.105_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.69109446, y: 1.1321211, z: 0.20165646}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.106_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.65050745, y: 0.97866076, z: 0.47687322}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.107_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.740712, y: 0.9768985, z: 0.46929258}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.108_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.835326, y: 0.97866076, z: 0.4628467}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.109_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.70111346, y: 1.1555318, z: 0.17112342}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.110_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.6977645, y: 1.0926332, z: 0.14411235}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.111_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.15503645, y: 2.2684495, z: -0.09002439}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.112_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.24084271, y: 2.2684495, z: -0.09002439}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.113_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.15503645, y: 2.1910343, z: -0.090024404}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.114_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.24084271, y: 2.1910343, z: -0.090024404}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.116_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0, y: 1.7622473, z: 0.07112469}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.117_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.0013847507, y: 2.1420414, z: -0.09434253}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.118_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.56770134, y: 1.9130231, z: -0.34001023}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.119_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.73528177, y: 1.1361703, z: 0.17049113}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.120_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.74390894, y: 1.3002074, z: -0.24246952}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.6458629, y: 1.1408912, z: 0.17893067}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Cube.101_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.65706336, y: 1.259267, z: -0.14957292}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.016_low
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.36185306, y: 0.15190439, z: -0.110953584}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Armature
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0, y: 1.4329472, z: -0.22713828}
+      rotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+      scale: {x: 0.38941795, y: 0.38941795, z: 0.38941795}
+    - name: Bone
+      parentName: Armature
+      position: {x: -0, y: -0.25327396, z: -0.26996562}
+      rotation: {x: 0.13145834, y: -0.00000011817477, z: -0.000000015671056, w: 0.9913217}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999999}
+    - name: Bone.001
+      parentName: Bone
+      position: {x: -1.4359231e-14, y: 1.0357999, z: 0.000000020051433}
+      rotation: {x: -0.13145833, y: 2.1316282e-14, z: 0.0000000313421, w: 0.9913217}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: Bone.089
+      parentName: Bone.001
+      position: {x: -0.7586518, y: 1.5859035, z: 0.16395728}
+      rotation: {x: 0.15593566, y: -0.34584463, z: -0.16040002, w: 0.911234}
+      scale: {x: 1.0000001, y: 0.9999992, z: 0.9999999}
+    - name: Bone.091
+      parentName: Bone.089
+      position: {x: -0.4647894, y: 0.4917982, z: -0.5689011}
+      rotation: {x: 0.369728, y: -0.11717969, z: -0.5495824, w: 0.7399522}
+      scale: {x: 1.0000006, y: 0.99999976, z: 0.99999964}
+    - name: Bone.087
+      parentName: Bone.001
+      position: {x: -0.21725938, y: 1.5837057, z: 0.15382874}
+      rotation: {x: 0.095107965, y: -0.22473621, z: 0.20262773, w: 0.9483618}
+      scale: {x: 1.0000002, y: 0.99999994, z: 0.9999998}
+    - name: Bone.093
+      parentName: Bone.001
+      position: {x: -0.21725948, y: 1.5837058, z: -0.37116104}
+      rotation: {x: -0.08434758, y: 0.37154078, z: 0.21977323, w: 0.89807725}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000005}
+    - name: Bone.090
+      parentName: Bone.001
+      position: {x: -0.758652, y: 1.5859034, z: -0.42144486}
+      rotation: {x: -0.011235707, y: -0.39863116, z: -0.17574215, w: 0.9000454}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999999}
+    - name: Bone.080
+      parentName: Bone.001
+      position: {x: 0.5177708, y: 1.2755524, z: -0.19411229}
+      rotation: {x: -0.0011989176, y: -0.25259352, z: -0.00459256, w: 0.9675609}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1}
+    - name: Bone.082
+      parentName: Bone.080
+      position: {x: 0.47661254, y: 0.70741856, z: 0.8504845}
+      rotation: {x: 0.6192136, y: -0.0025798976, z: -0.35003752, w: 0.70288104}
+      scale: {x: 0.99999994, y: 1.0000224, z: 1.0000172}
+    - name: Bone.002
+      parentName: Bone.001
+      position: {x: 1.4274714, y: 1.423569, z: -0.2758253}
+      rotation: {x: 0.55163574, y: 0.43701056, z: 0.5505362, w: -0.44903195}
+      scale: {x: 1.00002, y: 0.99999094, z: 1.0000002}
+    - name: Bone.003
+      parentName: Bone.002
+      position: {x: -1.6598278e-11, y: 0.7507154, z: -0.000000037504158}
+      rotation: {x: 0.1104753, y: -0.014592231, z: -0.018992305, w: 0.9935903}
+      scale: {x: 1.0000004, y: 1.000002, z: 0.99999976}
+    - name: Bone.004
+      parentName: Bone.003
+      position: {x: 0.000000007799827, y: 1.008089, z: -0.00000024677138}
+      rotation: {x: 0.028156057, y: -0.052688602, z: -0.0013369708, w: 0.9982131}
+      scale: {x: 1.0004876, y: 0.9994902, z: 1.0000013}
+    - name: Bone.005
+      parentName: Bone.004
+      position: {x: 0.000000010244548, y: 1.2680794, z: 0.00000017788261}
+      rotation: {x: -0.0059630135, y: 0.0030015483, z: 0.036172945, w: 0.99932325}
+      scale: {x: 0.99990356, y: 1.0001235, z: 1.0000137}
+    - name: Bone.007
+      parentName: Bone.005
+      position: {x: -0.00000011920929, y: 1.0249116, z: -0.00000016391277}
+      rotation: {x: 0.019898333, y: -0.027880758, z: -0.70994776, w: 0.7034208}
+      scale: {x: 1.0000454, y: 0.9999517, z: 1.000034}
+    - name: Bone.009
+      parentName: Bone.005
+      position: {x: -0.00000011920929, y: 1.0249116, z: -0.00000016391277}
+      rotation: {x: -0.07536929, y: 0.028360786, z: 0.7185196, w: 0.6908291}
+      scale: {x: 0.99977666, y: 1.0002264, z: 1.0001053}
+    - name: Bone.010
+      parentName: Bone.001
+      position: {x: -1.5029207, y: 1.2815368, z: -0.34737414}
+      rotation: {x: -0.038725637, y: 0.06437797, z: 0.8139396, w: 0.57607126}
+      scale: {x: 1.0000201, y: 1.0000091, z: 0.99999744}
+    - name: Bone.011
+      parentName: Bone.010
+      position: {x: 0.000000026251655, y: 1.5850908, z: 0.000000018626451}
+      rotation: {x: 0.03049994, y: 0.100116014, z: -0.13444641, w: 0.98537844}
+      scale: {x: 1.0000205, y: 0.9999941, z: 1.0000081}
+    - name: Bone.012
+      parentName: Bone.011
+      position: {x: -0.00000005075708, y: 1.1204518, z: 0.00000004749745}
+      rotation: {x: -0.00071960693, y: 0.000027816746, z: -0.015534027, w: 0.9998791}
+      scale: {x: 1.0000613, y: 1.000042, z: 1.000015}
+    - name: Bone.013
+      parentName: Bone.012
+      position: {x: -0.007222876, y: 0.94744885, z: 0.0014734417}
+      rotation: {x: -0.5706784, y: -0.5778581, z: -0.37146398, w: 0.44991192}
+      scale: {x: 1.0002799, y: 1.000021, z: 0.9997848}
+    - name: 6
+      parentName: Bone
+      position: {x: -0.9274997, y: 0.35420862, z: 0.14729086}
+      rotation: {x: 0.9442994, y: -0.004796313, z: 0.0024459243, w: 0.3290436}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000005}
+    - name: 4
+      parentName: 6
+      position: {x: 0.032179132, y: 1.7545674, z: 0.029853681}
+      rotation: {x: 0.33490938, y: -0.0027331589, z: -0.00963697, w: 0.94219714}
+      scale: {x: 1.0000004, y: 1.0000262, z: 1.0000241}
+    - name: 2
+      parentName: 4
+      position: {x: -0.00000005035038, y: 1.3435986, z: -0.0051934724}
+      rotation: {x: -0.40202028, y: -0.0000943481, z: 0.004862271, w: 0.9156179}
+      scale: {x: 0.99999964, y: 1.0000006, z: 0.9999905}
+    - name: 1
+      parentName: 2
+      position: {x: 0.000000028203033, y: 0.8311704, z: -0.000000057605575}
+      rotation: {x: -0.47910202, y: -7.9242923e-10, z: 0.00000072210986, w: 0.8777593}
+      scale: {x: 0.9999999, y: 1.0000087, z: 0.9999988}
+    - name: Bone.006
+      parentName: Bone
+      position: {x: 0.9600844, y: 0.35420862, z: 0.1472904}
+      rotation: {x: 0.94637406, y: 0.032407835, z: -0.018388646, w: 0.32091707}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000006}
+    - name: Bone.008
+      parentName: Bone.006
+      position: {x: -0.00000013972239, y: 1.7551084, z: 0.005384228}
+      rotation: {x: 0.32675502, y: 0.018130856, z: -0.015903618, w: 0.9448014}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000038}
+    - name: 2.2
+      parentName: Bone.008
+      position: {x: 0.00000005957199, y: 1.3435941, z: -0.00628471}
+      rotation: {x: -0.40219566, y: -0.0034198547, z: 0.048060432, w: 0.914285}
+      scale: {x: 0.9999998, y: 1.0000137, z: 1.0000029}
+    - name: 1.1
+      parentName: 2.2
+      position: {x: 0.000000024206315, y: 0.83117026, z: 0.000000009022074}
+      rotation: {x: -0.47910208, y: 3.765876e-13, z: 0.00000072262213, w: 0.8777592}
+      scale: {x: 1.0000001, y: 0.99999696, z: 1.0000105}
+    - name: Backleg2
+      parentName: Armature
+      position: {x: 0.9600843, y: -2.7173605, z: 0.5454683}
+      rotation: {x: -0.7106451, y: -0.00000050321876, z: 0.0000005082931, w: 0.7035507}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.99999994}
+    - name: Backleg1
+      parentName: Armature
+      position: {x: -0.9274998, y: -2.7173605, z: 0.5454683}
+      rotation: {x: -0.7116311, y: -0.00000050250515, z: 0.0000005089982, w: 0.70255333}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.99999994}
+    - name: Object.083_low.001
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.5710617, y: 1.303484, z: -0.23821574}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.084_low.001
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.72018087, y: 1.303484, z: -0.25618094}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.073_low.001
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.19281322, y: 1.14419, z: -0.24726889}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.066_low.001
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: 0.7237103, y: 0.9589481, z: 0.56651217}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.080_low.001
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.46036318, y: 1.8946455, z: -0.33909425}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: Object.081_low.001
+      parentName: SM_PostApocalypRobor(Clone)
+      position: {x: -0.43371385, y: 1.8901614, z: -0.33909425}
+      rotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -325,13 +932,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

@@ -15,13 +15,14 @@ public class HealthSystem : MonoBehaviour
         if (!_inBlockingState)
         {
             _currentHealth -= damage;
-            _characterAnimation.Hit();
+         //   _characterAnimation.Hit();  
         }
 
         if (_currentHealth <= 0)
         {
             _isDead = true;
             _characterAnimation.Death();
+
         }
     }
 
@@ -39,4 +40,6 @@ public class HealthSystem : MonoBehaviour
     {
         _characterAnimation = GetComponentInChildren<CharacterAnimation>();
     }
+
+   
 }
