@@ -875,7 +875,7 @@ PrefabInstance:
     - target: {fileID: 820701309320835920, guid: 50247386434bf454b806973790ca901c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 22b73fcba686b554ebb0f305f66be000, type: 2}
+      objectReference: {fileID: 2100000, guid: 48f67990d7f9d114e8da0537873fb014, type: 2}
     - target: {fileID: 919132149155446097, guid: 50247386434bf454b806973790ca901c, type: 3}
       propertyPath: m_Name
       value: SM_Van
@@ -883,7 +883,7 @@ PrefabInstance:
     - target: {fileID: 5249254506479443034, guid: 50247386434bf454b806973790ca901c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 22b73fcba686b554ebb0f305f66be000, type: 2}
+      objectReference: {fileID: 2100000, guid: 48f67990d7f9d114e8da0537873fb014, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
