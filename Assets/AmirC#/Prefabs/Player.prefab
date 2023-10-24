@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 71050748768806162}
   - component: {fileID: 3208648222565233470}
+  - component: {fileID: 4383878811806631143}
   - component: {fileID: 5654046313952043959}
   - component: {fileID: 5875574790758298572}
   - component: {fileID: 9149548799173184264}
@@ -62,6 +63,29 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!136 &4383878811806631143
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555263441258635507}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Height: 0.6
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!54 &5654046313952043959
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2824390bec120d4ba5315c63cc4bcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _colliderFullHeight: {fileID: 3208648222565233470}
+  _colliderOnCrouch: {fileID: 4383878811806631143}
 --- !u!114 &3202907764957043809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,9 +166,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ac0a73c964e1e4ba780053f41afa19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isDead: 0
+  _inBlockingState: 0
   _maxHealth: 5
   _currentHealth: 3
-  _inBlockingState: 0
 --- !u!1 &7221303078080220715
 GameObject:
   m_ObjectHideFlags: 0
