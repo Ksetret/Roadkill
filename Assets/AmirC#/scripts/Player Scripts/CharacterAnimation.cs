@@ -28,6 +28,21 @@ public class CharacterAnimation : MonoBehaviour
     {
         _animator.SetTrigger(trigger_name);
     }
+    public void EnemyAttack(int attack)
+    {
+        if (attack == 0)
+        {
+            //_animator.SetTrigger(AnimationTags.PUNCH_1_TRIGGER);
+        }
+        if (attack == 1)
+        {
+            //_animator.SetTrigger(AnimationTags.PUNCH_2_TRIGGER);
+        }
+        if (attack == 2)
+        {
+            //_animator.SetTrigger(AnimationTags.PUNCH_3_TRIGGER);
+        }
+    } // enemy atack
 
 
 
