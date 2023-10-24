@@ -11,21 +11,21 @@ public class PlayerControls : MonoBehaviour
 
     float _xMovement, _zMovement;
 
-    bool CheckCrouch(bool is_button_pressed)
+    bool CheckCrouch(bool is_pressed)
     {
-        _colliderOnCrouch.enabled = is_button_pressed;
-        _colliderFullHeight.enabled = !is_button_pressed;
-        _characterAnimation.SetAnimationBoolByName(AnimationTags.CROUCH_ANIMATION, is_button_pressed);
+        _colliderOnCrouch.enabled = is_pressed;
+        _colliderFullHeight.enabled = !is_pressed;
+        _characterAnimation.SetAnimationBoolByName(AnimationTags.CROUCH_ANIMATION, is_pressed);
 
-        return is_button_pressed;
+        return is_pressed;
     }
 
-    bool CheckBlock(bool is_button_pressed)
+    bool CheckBlock(bool is_pressed)
     {
-        _healthSystem._inBlockingState = is_button_pressed;
-        _characterAnimation.SetAnimationBoolByName(AnimationTags.BLOCK_ANIMATION, is_button_pressed);
+        _healthSystem._inBlockingState = is_pressed;
+        _characterAnimation.SetAnimationBoolByName(AnimationTags.BLOCK_ANIMATION, is_pressed);
 
-        return is_button_pressed;
+        return is_pressed;
     }
 
 
@@ -44,11 +44,10 @@ public class PlayerControls : MonoBehaviour
             _characterAnimation.Move(false);
             _characterMovement.RotatePlayer(_xMovement);
 
-            CheckCrouch(Input.GetKey(KeyCode.LeftControl));
-            CheckBlock(Input.GetKey(KeyCode.B));
-            //
-            if (_xMovement != 0 || _zMovement != 0)
-                _characterAnimation.Move(true);
+            if(!CheckCrouch(Input.GetKey(KeyCode.LeftControl))
+            && !CheckBlock(Input.GetKey(KeyCode.B)))
+                if (_xMovement != 0 || _zMovement != 0)
+                    _characterAnimation.Move(true);
         }
     }
 
@@ -57,7 +56,9 @@ public class PlayerControls : MonoBehaviour
         _xMovement = Input.GetAxisRaw(Axis.HORIZONTAL_AXIS);
         _zMovement = Input.GetAxisRaw(Axis.VERTICAL_AXIS);
 
-        if (!Input.GetKey(KeyCode.LeftControl) && !Input.GetKey(KeyCode.B) && !_healthSystem._isDead)
+        if(!Input.GetKey(KeyCode.LeftControl)
+        && !Input.GetKey(KeyCode.B)
+        && !_healthSystem._isDead)
             _characterMovement.DetectMovement(_xMovement, _zMovement);
     }
 }

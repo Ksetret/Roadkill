@@ -13,8 +13,8 @@ public class DamageSystem : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out HealthSystem healthSystem))
-            if (_healthSystem != healthSystem)
-                healthSystem.SetDamage(_damageAmount);
+        if (other.TryGetComponent(out HealthSystem health_system))
+            if (_healthSystem != health_system)
+                health_system.SetDamage(_damageAmount);
     }
 }

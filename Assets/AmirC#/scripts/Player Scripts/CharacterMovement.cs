@@ -9,7 +9,6 @@ public class CharacterMovement : MonoBehaviour
     Rigidbody _rigidbody;
 
     float _yRotation = 90f;
-    //float _rotationSpeed;
 
     public void DetectMovement(float movement_x = 0, float movement_z = 0)
     {
