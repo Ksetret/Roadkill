@@ -73,7 +73,7 @@ public class CharacterAttack : MonoBehaviour
         if (gameObject.TryGetComponent(out HealthSystem health_system)
         && !health_system._isDead
         && !Input.GetKey(KeyCode.LeftControl)
-        && !Input.GetKey(KeyCode.B))
+        && !Input.GetKey(KeyCode.R))
         {
             ComboAttacks();
             ResetComboState();

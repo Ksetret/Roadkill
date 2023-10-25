@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _attackDistance: 1
+  _playerTarget: {fileID: 0}
   _defaultAttackTime: 2
 --- !u!114 &7603776774614051756
 MonoBehaviour:
@@ -117,6 +118,8 @@ MonoBehaviour:
   _inBlockingState: 0
   _maxHealth: 5
   _currentHealth: 3
+  _deathWindow: {fileID: 0}
+  _fonWinndow: {fileID: 0}
 --- !u!1001 &6903558935436367718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,15 +130,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 118dafc66e5f5da478b0f51416f7e9b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 118dafc66e5f5da478b0f51416f7e9b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 118dafc66e5f5da478b0f51416f7e9b1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 118dafc66e5f5da478b0f51416f7e9b1, type: 3}
       propertyPath: m_LocalRotation.w

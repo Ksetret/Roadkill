@@ -39,7 +39,10 @@ public class PlayerControls : MonoBehaviour
 
     void Update()
     {
-        if(!_healthSystem._isDead)
+        if (Input.GetKeyDown(KeyCode.Escape))
+            MainMenu.instance.Pause();
+
+        if (!_healthSystem._isDead)
         {
             _characterAnimation.Move(false);
             _characterMovement.RotatePlayer(_xMovement);
