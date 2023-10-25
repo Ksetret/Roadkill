@@ -12,9 +12,9 @@ public class CharacterMovement : MonoBehaviour
 
     public void DetectMovement(float movement_x = 0, float movement_z = 0)
     {
-        Vector3 velocity = new Vector3(movement_x * _xSpeed,
+        Vector3 velocity = new Vector3(movement_x * -_xSpeed,
                                       _rigidbody.velocity.y,
-                                      movement_z * _zSpeed);
+                                      movement_z * -_zSpeed);
 
         _rigidbody.velocity = velocity;
     }
