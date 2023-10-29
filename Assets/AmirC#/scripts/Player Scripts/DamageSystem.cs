@@ -16,6 +16,6 @@ public class DamageSystem : MonoBehaviour
         Debug.Log(other.gameObject.name);
         if (other.TryGetComponent(out HealthSystem health_system))
             if (_healthSystem != health_system)
-                health_system.SetDamage(_damageAmount);
+                health_system.SetDamage(_damageAmount);             
     }
 }

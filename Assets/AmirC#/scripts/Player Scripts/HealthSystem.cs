@@ -15,16 +15,22 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private GameObject _deathWindow;
     [SerializeField] private GameObject _fonWinndow;
     [SerializeField] private GameObject _readyWindow;
+
+    private HealthUI _healthUI;
+    void Awake()
+    {
+        _healthUI = GetComponent<HealthUI>();
+
+        _characterAnimation = GetComponentInChildren<CharacterAnimation>();
+    }
     public void SetDamage(uint damage)
     {
-        if (_robot == true)
+       /* if (_robot == true)
         {
             _readyWindow.SetActive(true);
             Time.timeScale = 0;
-        }
+        }*/
 
-        if (_currentHealth > _maxHealth)
-            _currentHealth = 0; 
         
         if (_currentHealth <= 0)
         {
@@ -38,6 +44,11 @@ public class HealthSystem : MonoBehaviour
         else if (!_inBlockingState)
         {
             _currentHealth -= damage;
+
+            if (_currentHealth > _maxHealth)
+                _currentHealth = 0;
+
+            _healthUI.DisplayHealth(_currentHealth);
             _characterAnimation.Hit();  
         }
 
@@ -46,17 +57,16 @@ public class HealthSystem : MonoBehaviour
     public void GetHealth(uint heal_amount)
     {
         _currentHealth += heal_amount;
+        
 
         if (_currentHealth > _maxHealth)
             _currentHealth = _maxHealth;
+
+        _healthUI.DisplayHealth(_currentHealth);
     }
 
 
 
-    void Awake()
-    {
-        _characterAnimation = GetComponentInChildren<CharacterAnimation>();
-    }
 
    
 }

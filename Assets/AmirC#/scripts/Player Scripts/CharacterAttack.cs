@@ -19,7 +19,7 @@ public class CharacterAttack : MonoBehaviour
 
     void ComboAttacks()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             //if (_currentComboState == ComboState.KICK_1)
                 //return;
@@ -33,7 +33,7 @@ public class CharacterAttack : MonoBehaviour
             if (_currentComboState == ComboState.PUNCH_2)
                 _characterAnimation.SetAnimationTriggerByName(AnimationTags.PUNCH_2_TRIGGER);
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        else if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             //if (_currentComboState == ComboState.KICK_1)
                 _characterAnimation.SetAnimationTriggerByName(AnimationTags.KICK_1_TRIGGER);

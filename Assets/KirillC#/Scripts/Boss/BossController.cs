@@ -1,38 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BossController : MonoBehaviour
 {
     [SerializeField] private float _speed = 5f;
     [SerializeField] private float _attackDistance = 1f;
 
-    private CharacterAnimation _bossAnim;
+    private CharacterAnimation _enemyAnim;
     private Rigidbody _myBody;
-    private Transform _playerTarget;
+    [SerializeField] private Transform _playerTarget;
     private float _chasePlayerAfterAttack = 1f;
 
     private float _currentAttackTime;
-    private float _defaultAttackTime = 2f;
-    private bool _firePlayer = false;
+    [SerializeField] private float _defaultAttackTime = 2f;
+    private bool _followPlayer = false;
     private bool _attackPlayer = false;
 
-    private AnimationController _animationBoss;
+    private NavMeshAgent _agent;
 
     private void Awake()
     {
-        _bossAnim = GetComponentInChildren<CharacterAnimation>();
-
-        _animationBoss = GetComponentInChildren<AnimationController>();
-
+        _enemyAnim = GetComponentInChildren<CharacterAnimation>();
         _myBody = GetComponent<Rigidbody>();
 
         _playerTarget = GameObject.FindWithTag(Tags.PLAYER_TAG).transform;
+
+        _agent = GetComponent<NavMeshAgent>();
     }
 
     private void Start()
     {
-        _firePlayer = true;
+        // _followPlayer = true;
         _currentAttackTime = _defaultAttackTime;
     }
 
@@ -43,29 +43,33 @@ public class BossController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        FireTarget();
+        FollowTarget();
     }
 
-    private void FireTarget()
+    private void FollowTarget()
     {
-        if (!_firePlayer)
+
+        if (!_followPlayer)
             return;
 
         if (Vector3.Distance(transform.position, _playerTarget.position) > _attackDistance)
         {
             transform.LookAt(_playerTarget);
+            //_myBody.velocity = transform.forward * _speed;
+            _agent.destination = _playerTarget.position;
+
 
             if (_myBody.velocity.sqrMagnitude != 0)
             {
-                _animationBoss.Fire(true);
+                _enemyAnim.Walk(true);
             }
         }
         else if (Vector3.Distance(transform.position, _playerTarget.position) <= _attackDistance)
         {
             _myBody.velocity = Vector3.zero;
-            _animationBoss.Fire(false);
+            _enemyAnim.Walk(false);
 
-            _firePlayer = false;
+            _followPlayer = false;
             _attackPlayer = true;
 
         }
@@ -73,21 +77,28 @@ public class BossController : MonoBehaviour
 
     private void Attack()
     {
-        if (!_attackPlayer)
+        if (!_attackPlayer || GetComponent<HealthSystem>()._isDead == true)
             return;
 
         _currentAttackTime += Time.deltaTime;
 
         if (_currentAttackTime > _defaultAttackTime)
         {
-            _bossAnim.EnemyAttack(UnityEngine.Random.Range(0, 3));
+            _enemyAnim.EnemyAttack(UnityEngine.Random.Range(0, 3));
             _currentAttackTime = 0f;
+            _currentAttackTime = 0f;
+            transform.LookAt(_playerTarget);
         }
 
         if (Vector3.Distance(transform.position, _playerTarget.position) > _attackDistance + _chasePlayerAfterAttack)
         {
             _attackPlayer = false;
-            _firePlayer = true;
+            _followPlayer = true;
         }
+    }
+
+    public void StartMap()
+    {
+        _followPlayer = true;
     }
 }

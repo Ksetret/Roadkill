@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -18,12 +19,20 @@ public class EnemyMovement : MonoBehaviour
     private bool _followPlayer = false;
     private bool _attackPlayer = false;
 
+    [SerializeField] private bool _robot = false;
+    [SerializeField] private float _fireDistance = 1f;
+    private bool _firePlayer = false;
+
+    private NavMeshAgent _agent;
+
     private void Awake()
     {
         _enemyAnim = GetComponentInChildren<CharacterAnimation>();
         _myBody = GetComponent<Rigidbody>();
 
         _playerTarget = GameObject.FindWithTag(Tags.PLAYER_TAG).transform;
+
+        _agent = GetComponent<NavMeshAgent>();
     }
 
     private void Start()
@@ -35,11 +44,16 @@ public class EnemyMovement : MonoBehaviour
     private void Update()
     {
         Attack();
+
+        FollowTarget();
+
+        if (_robot == true)
+        Fire();
     }
 
     private void FixedUpdate()
     {
-        FollowTarget();
+        
     }
 
     private void FollowTarget()
@@ -51,7 +65,9 @@ public class EnemyMovement : MonoBehaviour
         if(Vector3.Distance(transform.position, _playerTarget.position) > _attackDistance)
         {
             transform.LookAt(_playerTarget);
-            _myBody.velocity = transform.forward * _speed;
+            //_myBody.velocity = transform.forward * _speed;
+            _agent.destination = _playerTarget.position;                                        
+
 
             if(_myBody.velocity.sqrMagnitude != 0)
             {
@@ -66,6 +82,30 @@ public class EnemyMovement : MonoBehaviour
             _attackPlayer = true;
 
         }
+
+
+        if (_robot == true)
+        {
+            if (Vector3.Distance(transform.position, _playerTarget.position) > _fireDistance)
+            {
+                transform.LookAt(_playerTarget);
+                //_myBody.velocity = transform.forward * _speed;
+
+
+                if (_myBody.velocity.sqrMagnitude != 0)
+                {
+                    _enemyAnim.Walk(true);
+                }
+            }
+            else if (Vector3.Distance(transform.position, _playerTarget.position) <= _fireDistance)
+            {
+                _myBody.velocity = Vector3.zero;
+                _enemyAnim.Walk(false);
+
+                _followPlayer = false;
+                _firePlayer = true;
+            }
+        }
     }
 
     private void Attack()
@@ -79,6 +119,8 @@ public class EnemyMovement : MonoBehaviour
         {
             _enemyAnim.EnemyAttack(UnityEngine.Random.Range(0,3));
             _currentAttackTime = 0f;
+            _currentAttackTime = 0f;
+            transform.LookAt(_playerTarget);
         }
 
         if(Vector3.Distance(transform.position, _playerTarget.position) > _attackDistance + _chasePlayerAfterAttack)
@@ -88,6 +130,26 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    private void Fire()
+    {
+        if (!_firePlayer || GetComponent<HealthSystem>()._isDead == true)
+            return;
+
+        _currentAttackTime += Time.deltaTime;
+
+        if (_currentAttackTime > _defaultAttackTime)
+        {
+            _enemyAnim.Fire(true);
+            _currentAttackTime = 0f;
+            transform.LookAt(_playerTarget);
+        }
+
+        if (Vector3.Distance(transform.position, _playerTarget.position) < _attackDistance + _chasePlayerAfterAttack)
+        {
+            _firePlayer = false;
+            _followPlayer = true;
+        }
+    }
     public void StartMap()
     {
         _followPlayer = true;

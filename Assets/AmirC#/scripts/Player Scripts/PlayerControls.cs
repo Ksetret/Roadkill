@@ -48,7 +48,7 @@ public class PlayerControls : MonoBehaviour
             _characterMovement.RotatePlayer(_xMovement);
 
             if(!CheckCrouch(Input.GetKey(KeyCode.LeftControl))
-            && !CheckBlock(Input.GetKey(KeyCode.B)))
+            && !CheckBlock(Input.GetKey(KeyCode.R)))
                 if (_xMovement != 0 || _zMovement != 0)
                     _characterAnimation.Move(true);
         }
@@ -60,7 +60,7 @@ public class PlayerControls : MonoBehaviour
         _zMovement = Input.GetAxisRaw(Axis.VERTICAL_AXIS);
 
         if(!Input.GetKey(KeyCode.LeftControl)
-        && !Input.GetKey(KeyCode.B)
+        && !Input.GetKey(KeyCode.R)
         && !_healthSystem._isDead)
             _characterMovement.DetectMovement(_xMovement, _zMovement);
     }

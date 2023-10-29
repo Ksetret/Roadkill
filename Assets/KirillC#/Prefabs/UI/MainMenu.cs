@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private AudioSource _fonSounde;
     [SerializeField] private GameObject _stopWindow;
     [SerializeField] private GameObject _fon;
+    [SerializeField] private GameObject _helthBar;
 
     static public MainMenu instance;
 
@@ -28,6 +29,7 @@ public class MainMenu : MonoBehaviour
        // RoadGenerator.instanse.StartLevel();
         _menuWindow.SetActive(false);
         _fon.SetActive(false);
+        _helthBar.SetActive(true);
         _fonSounde.Play();
     }
 
@@ -47,15 +49,18 @@ public class MainMenu : MonoBehaviour
 
     public void MainMenuButton()
     {
+        _helthBar.SetActive(false);
         _scoreWindow.SetActive(false);
         _autorWinfow.SetActive(false);
         _fon.SetActive(true);
         _stopWindow.SetActive(false);
         _menuWindow.SetActive(true);
+        _fonSounde.Stop();
     }
 
     public void RestartLvl()
     {
+        Debug.Log("Рестарт сцены");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -66,7 +71,7 @@ public class MainMenu : MonoBehaviour
 
     public void Resume()
     {
-        
+        _helthBar.SetActive(true);
         _stopWindow.SetActive(false);
         _fon.SetActive(false);
         Time.timeScale = 1;
@@ -74,10 +79,10 @@ public class MainMenu : MonoBehaviour
 
     public void Pause()
     {
+        _helthBar.SetActive(false);
         _stopWindow.SetActive(true);
         _fon.SetActive(true);
         Time.timeScale = 0;
-
     }
 
     public void AnayTelegram() { Application.OpenURL("https://web.telegram.org/k/#@anialavik"); }

@@ -24,7 +24,7 @@ public class CharacterAnimation : MonoBehaviour
         _animator.SetTrigger(AnimationTags.DEATH_TRIGGER);
         transform.GetComponentInParent<CapsuleCollider>().enabled = false;
         transform.GetComponentInParent<Rigidbody>().useGravity = false;
-        Destroy(gameObject, 20f);
+        Destroy(gameObject, 3f);
 
     }
 
@@ -56,5 +56,9 @@ public class CharacterAnimation : MonoBehaviour
     void Awake()
     {
         _animator = GetComponent<Animator>();
+    }
+    public void Fire(bool fire)
+    {
+        _animator.SetBool("Fire", fire);
     }
 }
